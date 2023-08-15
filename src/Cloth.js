@@ -1,7 +1,7 @@
-// 옷의 정보를 담고 있는 Component를 불러오는 Component를 만들어야 함
-
 import Top from "./Top";
 import Bottom from "./Bottom";
+
+import "./Cloth.css";
 
 function Cloth() {
   return (
