@@ -1,25 +1,23 @@
 import red_t_shirt from "./assets/top/red-t-shirt.jpg";
 import blue_t_shirt from "./assets/top/blue-t-shirt.jpg";
 
-const TOP_LIST = {
-  t_shirt: [red_t_shirt, blue_t_shirt],
-};
+const TOP_LIST = [red_t_shirt, blue_t_shirt];
 
-function Top() {
+function Top({ imgNo }) {
   // const src = TOP_LIST.t_shirt[0];
   console.log("Top");
 
+  console.log("Top", imgNo);
   const forRendering = () => {
     const result = [];
-    for (let elem in TOP_LIST) {
-      console.log(elem);
-      for (let i = 0; i < TOP_LIST[elem].length; i++) {
-        console.log(elem, TOP_LIST[elem][i]);
-        const src = TOP_LIST[elem][i];
-        result.push(<img src={src} alt={src} className="clothImg" />);
-      }
-      console.log("result", result);
+    for (let i = 0; i < TOP_LIST.length; i++) {
+      const src = TOP_LIST[i];
+      result.push(<img src={src} alt={src} className="clothImg" />);
     }
+    let a = imgNo % TOP_LIST.length;
+    result.push(
+      <img src={TOP_LIST[a]} alt={TOP_LIST[a]} className="clothImg" />
+    );
     return result;
   };
 
