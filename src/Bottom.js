@@ -7,15 +7,10 @@ const BOTTOM_LIST = {
 };
 
 function Bottom() {
-  // const src = BOTTOM_LIST.jeans[0];
-  console.log("Bottom");
-
   const forRendering = () => {
     const result = [];
     for (let elem in BOTTOM_LIST) {
-      console.log(elem);
       for (let i = 0; i < BOTTOM_LIST[elem].length; i++) {
-        console.log(elem, BOTTOM_LIST[elem][i]);
         const src = BOTTOM_LIST[elem][i];
         result.push(<img src={src} alt={src} className="clothImg" />);
       }
