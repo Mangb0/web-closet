@@ -1,7 +1,10 @@
-import red_t_shirt from "./assets/top/red-t-shirt.jpg";
-import blue_t_shirt from "./assets/top/blue-t-shirt.jpg";
+import top1 from "./assets/top/red-t-shirt.jpg";
+import top2 from "./assets/top/blue-t-shirt.jpg";
+import top3 from "./assets/top/alex-haigh-fEt6Wd4t4j0-unsplash.jpg";
+import top4 from "./assets/top/faith-yarn-Wr0TpKqf26s-unsplash.jpg";
+import top5 from "./assets/top/ryan-hoffman-6Nub980bI3I-unsplash.jpg";
 
-const TOP_LIST = [red_t_shirt, blue_t_shirt];
+const TOP_LIST = [top1, top2, top3, top4, top5];
 
 function Top({ imgNo }) {
   // const src = TOP_LIST.t_shirt[0];
