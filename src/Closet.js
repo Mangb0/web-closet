@@ -5,11 +5,16 @@ import "./Closet.css";
 
 function Closet() {
   const [num, setNum] = useState(0);
+  const [type, setType] = useState("top");
 
   return (
     <div className="closet">
+      <div className="btns">
+        <button onClick={() => setType("top")}>Top</button>
+        <button onClick={() => setType("bottom")}>Bottom</button>
+      </div>
       <div className="top">
-        <Cloth type="top" imgNo={num} />
+        <Cloth type={type} imgNo={num} />
         <div>
           <button onClick={() => setNum(num + 1)}>+</button>
           <p>{num}</p>
@@ -18,7 +23,7 @@ function Closet() {
       </div>
       <div className="bottom">
         {/* <Bottom /> */}
-        <Cloth type="bottom" imgNo={0} />
+        {/* <Cloth type="bottom" imgNo={0} /> */}
       </div>
     </div>
   );

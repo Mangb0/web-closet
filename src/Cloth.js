@@ -22,16 +22,18 @@ function Cloth({ type = "top", imgNo }) {
     const result = [];
     for (let i = 0; i < TOP_LIST[type].length; i++) {
       const src = TOP_LIST[type][i];
-      result.push(<img src={src} alt={src} className="clothImg" />);
+      result.push(
+        <img src={src} alt={src} key={type + i} className="clothImg" />
+      );
     }
-    let a = imgNo % TOP_LIST[type].length;
-    result.push(
-      <img
-        src={TOP_LIST[type][a]}
-        alt={TOP_LIST[type][a]}
-        className="clothImg"
-      />
-    );
+    // let a = imgNo % TOP_LIST[type].length;
+    // result.push(
+    //   <img
+    //     src={TOP_LIST[type][a]}
+    //     alt={TOP_LIST[type][a]}
+    //     className="clothImg"
+    //   />
+    // );
     return result;
   };
 
