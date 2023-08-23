@@ -23,7 +23,9 @@ function Cloth({ type = "top", imgNo }) {
     for (let i = 0; i < TOP_LIST[type].length; i++) {
       const src = TOP_LIST[type][i];
       result.push(
-        <img src={src} alt={src} key={type + i} className="clothImg" />
+        <li>
+          <img src={src} alt={src} key={type + i} className="clothImg" />
+        </li>
       );
     }
     // let a = imgNo % TOP_LIST[type].length;
@@ -39,7 +41,7 @@ function Cloth({ type = "top", imgNo }) {
 
   // return <div>wearTop</div>;
   // return <img src={src} alt={src} className="clothImg" />;
-  return forRendering();
+  return <ul className="cloth-list">{forRendering()}</ul>;
 }
 
 export default Cloth;
