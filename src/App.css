@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2eee9;
+}
+
 .App {
   width: 100%;
   max-width: 640px;

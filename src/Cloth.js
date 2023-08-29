@@ -23,9 +23,12 @@ function Cloth({ type = "top", imgNo }) {
     for (let i = 0; i < TOP_LIST[type].length; i++) {
       const src = TOP_LIST[type][i];
       result.push(
-        <li>
-          <img src={src} alt={src} key={type + i} className="clothImg" />
-        </li>
+        <div className="item">
+          <img src={src} alt={src} key={type + i} className="itemImg" />
+          <h2>itemName</h2>
+          <p>itemDescription</p>
+          <button>+</button>
+        </div>
       );
     }
     // let a = imgNo % TOP_LIST[type].length;
